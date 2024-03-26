@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ThreadPoolExample {
@@ -22,12 +23,14 @@ public class ThreadPoolExample {
 
         List<Customer> customers = Arrays.asList(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
 
-        Executor ex = Executors.newFixedThreadPool(2);
+        ExecutorService ex = Executors.newFixedThreadPool(2);
+       // Executor ex = Executors.newCachedThreadPool();
 
         for (int i = 0; i < customers.size(); i++) {
             TriggerEmailPolicy t = new TriggerEmailPolicy(customers.get(i));
             ex.execute(t);
         }
-
+        ex.shutdown();
+        //(working queue)blockingqueue->linkedblocking queue executor framework is use
     }
 }
