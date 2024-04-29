@@ -1,4 +1,4 @@
-package com.ashokit.threads.bankExample;
+package com.ashokit.bankExample;
 
 class Account {
     private double balance = 0;

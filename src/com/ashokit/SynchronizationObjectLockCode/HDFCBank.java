@@ -1,4 +1,4 @@
-package com.ashokit.threads.Synchronization;
+package com.ashokit.SynchronizationObjectLockCode;
 
 public class HDFCBank {
 	

@@ -1,15 +1,15 @@
-package com.ashokit.threads.Synchronization;
+package com.ashokit.SynchronizationObjectLockCode;
 
-public class PhonePe extends Thread{
+public class GooglePay extends Thread{
 	private HDFCBank bankAccnt;
-	public PhonePe(HDFCBank bankAccnt) {
+	public GooglePay(HDFCBank bankAccnt) {
 		// TODO Auto-generated constructor stub
 		this.bankAccnt=bankAccnt;
 	}
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		bankAccnt.balanceCheck();
+		bankAccnt.deposit(5000);
 	}
 
 }

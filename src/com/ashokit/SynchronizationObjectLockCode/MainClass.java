@@ -1,9 +1,9 @@
-package com.ashokit.threads.Synchronization;
+package com.ashokit.SynchronizationObjectLockCode;
 
 public class MainClass {
 public static void main(String[] args) {
 	
-	HDFCBank karthikAccnt=new HDFCBank(7000);
+	HDFCBank karthikAccnt=new HDFCBank(7000);	
 	System.out.println(karthikAccnt.hashCode());
 	HDFCBank ShankarAccnt=new HDFCBank(10000);
 	System.out.println(ShankarAccnt.hashCode());
